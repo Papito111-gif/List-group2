@@ -3,12 +3,12 @@ import { ReactNode } from "react";
 interface Props{
   children: string;
   color?:'Primary ' | 'secondary' | 'danger';
-  onclick: () => void
+  onClick: () => void
 }
-const button = ( {children, onClick , color ='Primary'}: Props ) => {
+const Button = ( {children, onClick, color}: Props ) => {
   return (
-   <button  className={"btn  btn-" + color }  onClick={onClick}>{children}</button> 
+   <button  className={'btn  btn-' + color} onClick={onClick} >{children}</button> 
   )
 }
 
-export default  button
+export default  Button;

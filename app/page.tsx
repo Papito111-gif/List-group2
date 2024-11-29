@@ -1,16 +1,19 @@
 "use client"
 import React from 'react';
+import { useState } from 'react';
 import ListGroup from './Mycomponent';
 import 'bootstrap/dist/css/bootstrap.css'
 import Alert from './Alert';
 import button from './Button';
+import Button from './Button';
 
 function Page() {
-  let items = [ "New york", "San Francisco", "Tokyo" , "London", "Paris"];
+  const [ alertVisible, setAlertVisibility] = useState(false);
 
   return(  
  <div>
-    <ListGroup  items={items} heading='cities'/>
+  { alertVisible && <Alert> My alert</Alert>}
+    < Button  color='primary' onClick={() => setAlertVisibility(true) } >My button</Button>
   </div>
   );
 }
