@@ -6,14 +6,11 @@ import Alert from './Alert';
 import button from './Button';
 
 function Page() {
-const [ alertVisible, setAlertVisibility] = useState(false);
+  let items = [ "New york", "San Francisco", "Tokyo" , "London", "Paris"];
 
-  return( 
+  return(  
  <div>
-    { alertVisible && <Alert>My alert</Alert>}
-  <button color="Primary"  onClick={() => setAlertVisibility(true)  }>
-    My button
-    </button> 
+    <ListGroup  items={items} heading='cities'/>
   </div>
   );
 }
